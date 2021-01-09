@@ -52,7 +52,7 @@ class menu : AppCompatActivity() {
         getSettings.setOnClickListener{
 
 
-            if(getSharedPreferences("settings", Context.MODE_PRIVATE).getString("settingsPassword", "12345") == ""){
+            if(getSharedPreferences("settings", Context.MODE_PRIVATE).getString("settingsPassword", "") == ""){
                 startActivity(Intent(this, settings::class.java))
             }else {
                 startActivity(PasswordIntent)

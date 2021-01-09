@@ -21,7 +21,7 @@ class password : AppCompatActivity() {
         supportActionBar!!.title="назад"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        val pass = getSharedPreferences("settings", Context.MODE_PRIVATE).getString("settingsPassword", "12345")
+        val pass = getSharedPreferences("settings", Context.MODE_PRIVATE).getString("settingsPassword", "")
         var counter = 5
 
 
