@@ -72,7 +72,7 @@ class  settings : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        settingsPassword.setText(prefs.getString("settingsPassword", "12345"))
+        settingsPassword.setText(prefs.getString("settingsPassword", ""))
         task.setText(prefs.getInt("task", 50).toString())
         negativeSwitch.isChecked = prefs.getBoolean("negativeSwitch", false)
 

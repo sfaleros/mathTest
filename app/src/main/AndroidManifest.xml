@@ -4,7 +4,8 @@
     package="com.example.tester">
 
     <application
-        android:icon="@drawable/icon4"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@drawable/icon4"
         android:allowBackup="true"
         android:label="@string/app_name"
 

@@ -29,7 +29,7 @@ class menu : AppCompatActivity() {
         var mod = "none"
         val day = SimpleDateFormat("d").format(Date())
         val maybeDay= prefs.getString("day", "1")
-        val toPasswordIntent = Intent(this, password::class.java)
+        val PasswordIntent = Intent(this, password::class.java)
 
         fun setInstallTime(){
             val sdf = SimpleDateFormat("d MMM yyyy HH:mm")
@@ -52,7 +52,15 @@ class menu : AppCompatActivity() {
         }
 
 
-        getSettings.setOnClickListener{startActivity(toPasswordIntent)}
+        getSettings.setOnClickListener{
+
+
+            if(getSharedPreferences("settings", Context.MODE_PRIVATE).getString("settingsPassword", "12345") == ""){
+                startActivity(Intent(this, settings::class.java))
+            }else {
+                startActivity(PasswordIntent)
+            }
+        }
 
 
         try{

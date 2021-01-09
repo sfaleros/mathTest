@@ -26,6 +26,7 @@ class password : AppCompatActivity() {
 
 
 
+
         enterPassword.setOnClickListener{
 
             if(passwordText.text.toString() == "funmod"){
@@ -36,17 +37,17 @@ class password : AppCompatActivity() {
             }else{
 
             if(passwordText.text.toString() == pass){
-                val randomIntent = Intent(this, settings::class.java)
-                startActivity(randomIntent)
+                startActivity(Intent(this, settings::class.java))
 
             }else{
-                passwordText.setText("")
-                counter -= 1
-                textAboutPassword.setText("помилка , залишилось $counter спроб ")
                 if(counter == 0){
                     totalForm.setBackgroundColor(Color.parseColor("#ffa1a1"))
                     android.os.Handler().postDelayed({onBackPressed()}, 1000)
 
+                }else{
+                    passwordText.setText("")
+                    counter -= 1
+                    textAboutPassword.setText("помилка , залишилось $counter спроб ")
                 }
             }
 
